@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-27-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   11-27-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+	<lightning-card title={friend.user_name} class="bear-tile-male">
+	<!-- <lightning-card if:false={isMale__c} title={bear.Name} class="bear-tile"> -->
+
+	<!-- <lightning-card title={bear.Name} class="bear-tile"> -->
+
+		<div slot="actions">
+			<lightning-button-icon
+				icon-name="utility:search"
+				icon-class="bear-tile-button"
+				variant="bare"
+				alternative-text="Open record"
+				onclick={handleOpenRecordClick}>
+			</lightning-button-icon>
+		</div>
+		<div class="slds-var-p-horizontal_small bear-tile-body-male" style="text-align:center;">
+			<!-- <div class="slds-media__figure"> -->
+				<!-- <div> -->
+					<!-- <img src={appResources.bearSilhouette} alt="Bear profile" class="bear-silhouette"/> -->
+					<img src={friend.url} alt="Bear profile" class="bear-silhouette"/>
+				<!-- </div> -->
+			<!-- </div> -->
+			<div style="margin-top: 10px;">
+				<p class="slds-var-m-bottom_xx-small">{friend.gender} ,{friend.age} years old</p>
+				<!-- <span class="slds-var-m-bottom_xx-small">{bear.Sex__c} {bear.Age__c} years old</span> -->
+				<!-- <p class="slds-var-m-bottom_xx-small">{bear.Age__c} years old</p> -->
+				<!-- <p class="slds-var-m-bottom_xx-small">{bear.Height__c} cm</p> -->
+				<!-- <p class="slds-var-m-bottom_xx-small">{bear.Weight__c} Kg</p> -->
+			</div>
+		</div>
+	</lightning-card>
+</template>

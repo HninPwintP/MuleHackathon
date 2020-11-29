@@ -1,0 +1,74 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-29-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   11-27-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+	<lightning-card>
+	<!-- <lightning-card title="JURASSIC WORLD" icon-name="utility:animal_and_nature"> -->
+		<h3 slot="title">
+			<img src={jurassicWorldIcon} alt="jurassicWorldIcon" class="customIcon"/> WELCOME TO JURASSIC WORLD
+		</h3>
+
+		<article class="slds-card">
+			<div class="slds-card__body slds-card__body_inner">
+				<div class="slds-grid slds-wrap">
+					<div class="slds-col slds-size_1-of-2" style="text-align:right;padding-right:5px;">
+						<img src={myImageUrl} alt="Bear profile" class="my-image"/>
+					</div>
+					<div class="slds-col slds-size_1-of-2" style="text-align:left;padding-left:5px;">
+						<img src={sampleUrl} alt="Bear profile" class="my-image"/>
+					</div>
+				</div>
+				<lightning-card>
+					<div class="slds-grid slds-wrap slds-grid--pull-padded">
+						<div if:true={isChartJsInitialized} class="slds-col--padded slds-size--1-of-1">
+							<canvas class="linechart" lwc:dom="manual"></canvas>
+						</div>
+						<div if:false={isChartJsInitialized} class="slds-col--padded slds-size--1-of-1">
+							ChartJs Not loaded yet
+						</div>
+					</div>
+				</lightning-card>
+			</div>
+			<footer class="slds-card__footer">
+				Search Friends
+			</footer>
+		</article>
+
+		<div class="slds-card__body_inner">
+			<!-- Start friend list -->
+			<template if:true={friends}>
+				<lightning-layout multiple-rows="true" pull-to-boundary="small">
+					<template for:each={friends} for:item="friend">
+						<lightning-layout-item key={friend.user_name} size="3" class="slds-var-p-around_x-small">
+							<c-friend-tile friend={friend} onbearview={handleBearView}></c-friend-tile>
+						</lightning-layout-item>
+					</template>
+				</lightning-layout>
+				<template if:false={hasResults}>
+					<div class="slds-align_absolute-center slds-var-m-vertical_small">
+						This is very disturbing, we did not find results...
+					</div>
+				</template>
+			</template>
+			<template if:true={friends.error}>
+				<div class="slds-text-color_error">
+					An error occurred while loading the friend list
+				</div>
+			</template>
+		</div>
+		<article class="slds-card">
+			<lightning-map
+				map-markers={mapMarkers}
+				zoom-level="11"
+				markers-title="Friends">
+			</lightning-map>
+		</article>
+	</lightning-card>
+</template>

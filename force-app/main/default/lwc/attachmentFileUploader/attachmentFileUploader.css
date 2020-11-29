@@ -1,0 +1,10 @@
+h1 {
+    font-size: 2rem;
+    color: rgb(0, 112, 210);
+}
+
+img {
+    position: absolute;
+    width: 98%;
+    /* opacity: 0.3; */
+}

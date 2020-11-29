@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 11-29-2020
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+  Modifications Log 
+  Ver   Date         Author                               Modification
+  1.0   11-26-2020   ChangeMeIn@UserSettingsUnder.SFDoc   Initial Version
+-->
+<template>
+    <template if:true={init}>
+    <lightning-card icon-name="standard:file">
+        <h1 slot="title"><strong>Welcome To Jurassic World</strong></h1>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-input type="text" label="Name" value={name} onchange={handleNameChange} required></lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-12"></div>
+            <div class="slds-col slds-size_2-of-12">
+                <lightning-combobox
+                    label="Gender"
+                    value={gender}
+                    options={genderOptions} onchange={handleGenderChange}>
+                </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_6-of-12"></div>
+            <div class="slds-col slds-size_1-of-6">
+                <lightning-input type="text" label="Age" value={age} onchange={handleAgeChange}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_5-of-6"></div>
+        </div>
+        <!-- addition by fan end -->
+    <div>
+        <lightning-input label="" name="file to uploder" onchange={handleSelectedFiles} 
+            type="file" multiple></lightning-input>{fileName}
+    </div><br/>            
+    <div class="slds-text-body_small">
+    <template if:true={showSpinner}>
+        <lightning-spinner alternative-text="Uploading the file......" size="medium">                        
+            </lightning-spinner>
+    </template>
+    </div><br/>
+    <div>
+        <lightning-button label="Upload" onclick={handleFileUpload}></lightning-button>
+    </div>
+        </lightning-card>
+    </template>
+        <template if:true={detail}>
+            <lightning-card>
+                <div style="width: auto;">
+                    <c-result-detail predict-response={responseData}></c-result-detail>                  
+                </div>
+            </lightning-card>
+        </template>
+</template>
