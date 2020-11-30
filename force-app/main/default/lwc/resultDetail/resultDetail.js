@@ -28,7 +28,7 @@ export default class BearList extends NavigationMixin(LightningElement) {
 		this.config = {
 			type: 'radar',
 			data: { 
-				labels: ["Power", "Speed", "attack", "defence", "Intelligence"],
+				labels: ["Power", "Speed", "aggressivity", "defence", "Intelligence"],
 				datasets: [{
 					label: this.responseJson.user_info.user_name,
 					data: [this.responseJson.dinosaurs_info.power, this.responseJson.dinosaurs_info.speed
@@ -60,7 +60,7 @@ export default class BearList extends NavigationMixin(LightningElement) {
 			options: {
 				title: {
 					display: true,
-					text: '実力対比',
+					text: 'Ability Contrast',
 					fontSize: 22,
 					fontStyle: 'bold'
 				},
@@ -94,7 +94,7 @@ export default class BearList extends NavigationMixin(LightningElement) {
 		  return {
 			location: { Latitude, Longitude },
 			title: friend.user_name,
-			description: `Coords: ${Latitude}, ${Longitude}`,
+			description: ``,
 			icon: 'utility:animal_and_nature'
 		  };
 		});
