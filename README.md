@@ -1,18 +1,12 @@
-# Salesforce DX Project: Next Steps
+# This is SFDC code for My Mulesoft Hackathon 2020 commit
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+There is 3 main component of LWC which are attachmentFileUploader, resultDetail and FriendTile.
+There is only one apex class called fileUpload for HTTP callout(May be we can also use Fetch method to do this on the client side).
 
-## How Do You Plan to Deploy Your Changes?
+"attachmentFileUploader" is maily for upload picture draw by child and have a child component "resultDetail" to show the result.
+![](images/fileUpload.jpeg)
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+"resultDetail" component is also with a component "FriendTile" to display friendList.
+For radar chart in the middle of the page, we use ChartJs.
+![](/images/9D0C5007-1264-4CDF-A7D9-54D5BD4F4469.png)
 
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
-
-## Read All About It
-
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
