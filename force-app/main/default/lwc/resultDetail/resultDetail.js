@@ -103,19 +103,6 @@ export default class BearList extends NavigationMixin(LightningElement) {
 	get hasResults() {
 		return (this.responseJson.friend_list.length > 0);
 	}
-	/**handleBearView(event) {
-		// Get bear record id from bearview event
-		const bearId = event.detail;
-		// Navigate to bear record page
-		this[NavigationMixin.Navigate]({
-			type: 'standard__recordPage',
-			attributes: {
-				recordId: bearId,
-				objectApiName: 'Bear__c',
-				actionName: 'view',
-			},
-		});
-	}*/
 
 	connectedCallback() {
 		this.handleDisplay();
