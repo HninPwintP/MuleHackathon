@@ -6,7 +6,7 @@ import chartjs from '@salesforce/resourceUrl/chartJS';
 import { loadScript } from 'lightning/platformResourceLoader';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
-export default class BearList extends NavigationMixin(LightningElement) {
+export default class resultDetail extends NavigationMixin(LightningElement) {
 	@api predictResponse;
 	jurassicWorldIcon = jurassic_world_icon;
 	@track myImageUrl = my_image;

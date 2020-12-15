@@ -2,7 +2,7 @@
   @description       : 
   @author            : ChangeMeIn@UserSettingsUnder.SFDoc
   @group             : 
-  @last modified on  : 11-29-2020
+  @last modified on  : 12-15-2020
   @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
   Modifications Log 
   Ver   Date         Author                               Modification
@@ -19,10 +19,10 @@
 			<div class="slds-card__body slds-card__body_inner">
 				<div class="slds-grid slds-wrap">
 					<div class="slds-col slds-size_1-of-2" style="text-align:right;padding-right:5px;">
-						<img src={myImageUrl} alt="Bear profile" class="my-image"/>
+						<img src={myImageUrl} alt="img" class="my-image"/>
 					</div>
 					<div class="slds-col slds-size_1-of-2" style="text-align:left;padding-left:5px;">
-						<img src={sampleUrl} alt="Bear profile" class="my-image"/>
+						<img src={sampleUrl} alt="img" class="my-image"/>
 					</div>
 				</div>
 				<lightning-card>
@@ -47,7 +47,7 @@
 				<lightning-layout multiple-rows="true" pull-to-boundary="small">
 					<template for:each={friends} for:item="friend">
 						<lightning-layout-item key={friend.user_name} size="3" class="slds-var-p-around_x-small">
-							<c-friend-tile friend={friend} onbearview={handleBearView}></c-friend-tile>
+							<c-friend-tile friend={friend}></c-friend-tile>
 						</lightning-layout-item>
 					</template>
 				</lightning-layout>

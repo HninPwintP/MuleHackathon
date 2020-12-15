@@ -1,23 +1,23 @@
-.bear-tile {
+.friend-tile {
     border: 1px solid #eab2e5;
     background-color: #f9e5f6;
     border-radius: .25rem;
     display: block;
   }
-  .bear-tile-male {
+  .friend-tile-male {
     border: 1px solid #8ec6e2;
     background-color: #e9f3f9;
     border-radius: .25rem;
     display: block;
   }
-  .bear-silhouette {
+  .friend-silhouette {
     /* height: 100px; */
     /* width: 165px; */
     margin-top: -5px;
   }
-  .bear-tile-body {
+  .friend-tile-body {
     background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #f9e5f6 100%);
   }
-  .bear-tile-body-male {
+  .friend-tile-body-male {
     background: linear-gradient(180deg, rgba(255,255,255,1) 80%, #e9f3f9 100%);
   }
